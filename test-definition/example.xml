@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--suite name="TestSuite" thread-count="2" parallel="tests" -->
+<suite name="HU01" preserve-order="true">
+    <parameter name="env" value="dev"></parameter>
+    <parameter name="os" value="windows" />
+    <test name="chromeTest">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.bvc.a2censo.test.ExampleTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="firefoxTest">
+        <parameter name="browser" value="firefox" />
+        <classes>
+            <class name="com.bvc.a2censo.test.ExampleTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="operaTest">
+        <parameter name="browser" value="opera" />
+        <classes>
+            <class name="com.bvc.a2censo.test.ExampleTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>
