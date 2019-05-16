@@ -6,9 +6,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
-import java.net.URL;
-import java.sql.Timestamp;
-import java.util.Date;
 
 public class Screenshot {
 
@@ -28,7 +25,8 @@ public class Screenshot {
             File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(src,new File(filePath));
 
-            URL path = new File(filePath).toURI().toURL();
+            //URL path = new File(filePath).toURI().toURL();
+            String path = "../"+filePath;
             String text = "<a href=" + path + "> Click to open screenshot of " + name + "</a>";
             return name + text + "<br>";
         } catch (Exception e) {

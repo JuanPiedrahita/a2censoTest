@@ -20,7 +20,7 @@ public class CP_001 extends BaseTest {
     public void CP_001(String broswer, String hu) {
 
         String testCase = hu+"-"+this.getClass().getSimpleName();
-        String testPath = hu+"/"+this.getClass().getSimpleName();
+        String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
 
         Reporter.log("Starting test: "+testCase+",with OS: "+operativeSystem+" in "+broswer+"<br>");
 

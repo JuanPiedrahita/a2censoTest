@@ -4,29 +4,24 @@
 
 <!--suite name="TestSuite" thread-count="2" parallel="tests" -->
 <suite name="test" preserve-order="true">
-    <parameter name="env" value="dev"></parameter>
-    <parameter name="os" value="windows" />
     <test name="chromeTest">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="com.bvc.a2censo.test.ExampleTest">
-            </class>
+            <class name="com.bvc.a2censo.test.ExampleTest"/>
         </classes>
     </test>
 
     <test name="firefoxTest">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="com.bvc.a2censo.test.ExampleTest">
-            </class>
+            <class name="com.bvc.a2censo.test.ExampleTest"/>
         </classes>
     </test>
 
     <test name="operaTest">
         <parameter name="browser" value="opera" />
         <classes>
-            <class name="com.bvc.a2censo.test.ExampleTest">
-            </class>
+            <class name="com.bvc.a2censo.test.ExampleTest"/>
         </classes>
     </test>
 
