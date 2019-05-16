@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 public class ExampleTest extends BaseTest {
 
     @Test(description = "This TC will perforrm a valid ...")
-    @Parameters({"os","browser"})
-    public void probarPortal(String os, String broswer) {
+    @Parameters({"browser"})
+    public void probarPortal(String broswer) {
 
-        Reporter.log("Starting test with OS: "+os+" in "+broswer+"\n");
+        Reporter.log("Starting test with OS: "+operativeSystem+" in "+broswer+"<br>");
 
         String url = "http://www.a2censo.com";
 

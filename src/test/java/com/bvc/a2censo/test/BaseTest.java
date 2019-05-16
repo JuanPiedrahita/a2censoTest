@@ -14,16 +14,25 @@ public abstract  class BaseTest {
     protected WebDriver driver;
     protected Actions action;
     protected JavascriptExecutor jsExecutor;
+    protected  String env;
+    protected  String operativeSystem;
+    protected  String basePath;
 
     @BeforeClass
-    @Parameters({"os","browser","env"})
-    public void setUp(String os, String broswer, String env) {
+    @Parameters({"browser"})
+    public void setUp(String browser) {
+
+        //System properties
+        env = System.getProperty("env");
+        operativeSystem = System.getProperty("operativeSystem");
+        basePath = System.getProperty("basePath");
 
         BroswerFactory factory = new BroswerFactory();
-        driver = factory.createWebDriver(os,broswer,env);
+        driver = factory.createWebDriver(operativeSystem,browser,env);
 
         action = new Actions(driver);
         jsExecutor = (JavascriptExecutor) driver;
+
     }
 
     @AfterClass

@@ -3,7 +3,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <!--suite name="TestSuite" thread-count="2" parallel="tests" -->
-<suite name="HU01" preserve-order="true">
+<suite name="test" preserve-order="true">
     <parameter name="env" value="dev"></parameter>
     <parameter name="os" value="windows" />
     <test name="chromeTest">

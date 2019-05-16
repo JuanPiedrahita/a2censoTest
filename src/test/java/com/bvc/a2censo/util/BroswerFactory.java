@@ -9,7 +9,6 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.opera.OperaOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 
@@ -88,6 +87,10 @@ public class BroswerFactory implements BroswerFactoryMethod{
 
         //Manage cookies
         driver.manage().deleteAllCookies();
+
+        //Scape for reporting in html
+        String ESCAPE_PROPERTY = "org.uncommons.reportng.escape-output";
+        System.setProperty(ESCAPE_PROPERTY, "false");
 
         return driver;
 
