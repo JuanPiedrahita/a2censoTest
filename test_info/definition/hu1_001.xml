@@ -12,17 +12,17 @@
         </classes>
     </test>
 
-    <test name="HU1-001_firefox">
+    <!--test name="HU1-001_firefox">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
         </classes>
-    </test>
+    </test-->
 
-    <test name="HU1-001_opera">
+    <!--test name="HU1-001_opera">
         <parameter name="browser" value="opera" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
         </classes>
-    </test>
+    </test-->
 </suite>

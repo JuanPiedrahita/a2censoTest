@@ -14,9 +14,10 @@ public abstract  class BaseTest {
     protected WebDriver driver;
     protected Actions action;
     protected JavascriptExecutor jsExecutor;
-    protected  String env;
-    protected  String operativeSystem;
-    protected  String basePath;
+    protected String env;
+    protected String operativeSystem;
+    protected String basePath;
+    protected String dataBasePath;
 
     @BeforeClass
     @Parameters({"browser"})
@@ -26,6 +27,7 @@ public abstract  class BaseTest {
         env = System.getProperty("env");
         operativeSystem = System.getProperty("operativeSystem");
         basePath = System.getProperty("basePath");
+        dataBasePath = System.getProperty("dataBasePath");
 
         BroswerFactory factory = new BroswerFactory();
         driver = factory.createWebDriver(operativeSystem,browser,env);

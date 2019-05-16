@@ -1,5 +1,7 @@
 package com.bvc.a2censo.test;
 
+import com.bvc.a2censo.util.ExcelUtils;
+import com.bvc.a2censo.util.Screenshot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,8 +14,8 @@ import org.testng.annotations.Test;
 public class ExampleTest extends BaseTest {
 
     @Test(description = "This TC will perforrm a valid ...")
-    @Parameters({"browser"})
-    public void probarPortal(String broswer) {
+    @Parameters({"browser","hu"})
+    public void probarPortal(String broswer, String hu) {
 
         Reporter.log("Starting test with OS: "+operativeSystem+" in "+broswer+"<br>");
 
@@ -109,6 +111,20 @@ public class ExampleTest extends BaseTest {
             e.printStackTrace();
         }
 
+        //Data from excel
+        String dataPath = dataBasePath+"/"+hu+"/";
+        String[][] data = ExcelUtils.getData(dataPath+"example.xlsx","Hoja1",false);
+        for (int i=0;i<data.length;i++) {
+            for (int j=0;j<data[i].length;j++) {
+                System.out.print(data[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+        //Take screenshoot
+        String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
+        String ssText = Screenshot.takeScreenshot(driver,testPath,broswer);
+        Reporter.log(ssText);
     }
 
 }

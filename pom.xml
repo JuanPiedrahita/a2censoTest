@@ -26,6 +26,7 @@
                         <operativeSystem>windows</operativeSystem>
                         <env>dev</env>
                         <basePath>http://a2censo.com.test.portal.s3-website-us-east-1.amazonaws.com/</basePath>
+                        <dataBasePath>test_info/data/</dataBasePath>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -61,6 +62,13 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-io</artifactId>
             <version>1.3.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.11</version>
         </dependency>
 
     </dependencies>

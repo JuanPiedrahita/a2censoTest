@@ -4,6 +4,7 @@
 
 <!--suite name="TestSuite" thread-count="2" parallel="tests" -->
 <suite name="test" preserve-order="true">
+    <parameter name="hu" value="example"/>
     <test name="test_chrome">
         <parameter name="browser" value="chrome" />
         <classes>
@@ -11,18 +12,18 @@
         </classes>
     </test>
 
-    <test name="test_firefox">
+    <!--test name="test_firefox">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.bvc.a2censo.test.ExampleTest"/>
         </classes>
-    </test>
+    </test-->
 
-    <test name="test_opera">
+    <!--test name="test_opera">
         <parameter name="browser" value="opera" />
         <classes>
             <class name="com.bvc.a2censo.test.ExampleTest"/>
         </classes>
-    </test>
+    </test-->
 
 </suite>
