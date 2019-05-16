@@ -5,21 +5,21 @@
 <!--suite name="TestSuite" thread-count="2" parallel="tests" -->
 <suite name="HU1-001" preserve-order="true">
     <parameter name="hu" value="HU1-001"/>
-    <test name="chromeTest">
+    <test name="HU1-001_chrome">
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
         </classes>
     </test>
 
-    <test name="firefoxTest">
+    <test name="HU1-001_firefox">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
         </classes>
     </test>
 
-    <test name="operaTest">
+    <test name="HU1-001_opera">
         <parameter name="browser" value="opera" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
