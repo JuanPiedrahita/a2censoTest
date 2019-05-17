@@ -33,7 +33,6 @@ public class ExampleTest extends BaseTest {
         btnRegistrate.click();
 
         //Seleccionar opción Soy Empresario
-        WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement btnEmpresario = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id=\"pyme\"]")));
         btnEmpresario.click();
 
@@ -88,6 +87,8 @@ public class ExampleTest extends BaseTest {
             //enviar formulario
             WebElement btnConfirmar = driver.findElement(By.id("confirmar"));
             jsExecutor.executeScript("arguments[0].scrollIntoView();", btnConfirmar);
+            // jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)"); //Hasta la última línea
+            // jsExecutor.executeScript("window.scrollBy(x-pixels,y-pixels)"); // By pixels
             action.moveToElement(btnConfirmar);
             action.perform();
 

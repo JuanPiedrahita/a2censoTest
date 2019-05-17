@@ -4,6 +4,7 @@ import com.bvc.a2censo.util.BroswerFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -18,6 +19,7 @@ public abstract  class BaseTest {
     protected String operativeSystem;
     protected String basePath;
     protected String dataBasePath;
+    protected WebDriverWait wait;
 
     @BeforeClass
     @Parameters({"browser"})
@@ -35,12 +37,18 @@ public abstract  class BaseTest {
         action = new Actions(driver);
         jsExecutor = (JavascriptExecutor) driver;
 
+        wait = new WebDriverWait(driver, 10);
+
     }
 
     @AfterClass
     public void tearDown(){
         //driver.close();
         driver.quit();
+    }
+
+    public void navegateToLanding(){
+        driver.navigate().to(basePath);
     }
 
 }
