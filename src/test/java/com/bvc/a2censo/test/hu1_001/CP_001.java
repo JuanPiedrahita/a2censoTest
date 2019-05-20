@@ -1,6 +1,7 @@
 package com.bvc.a2censo.test.hu1_001;
 
 import com.bvc.a2censo.test.BaseTest;
+import com.bvc.a2censo.test.UXTest;
 import com.bvc.a2censo.util.ExcelUtils;
 import com.bvc.a2censo.util.Screenshot;
 import org.openqa.selenium.By;
@@ -42,6 +43,14 @@ public class CP_001 extends BaseTest {
         Reporter.log("Validating body content<br>");
         checkPageContent("objects","body",testPath,dataPath);
         checkScrolling(testPath);
+
+        Reporter.log("Checking UX<br>");
+        checkUX(testPath);
+    }
+
+    public void checkUX(String testPath){
+        UXTest.checkHeaderScroll(driver, wait, testPath);
+        UXTest.checkHeaderStyles(driver,wait,action,testPath);
     }
 
     public void checkScrolling (String testPath) {

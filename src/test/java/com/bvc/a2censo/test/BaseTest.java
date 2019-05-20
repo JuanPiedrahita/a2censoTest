@@ -43,7 +43,7 @@ public abstract  class BaseTest {
         action = new Actions(driver);
         jsExecutor = (JavascriptExecutor) driver;
 
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 5);
 
     }
 
