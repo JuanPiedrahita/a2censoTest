@@ -89,7 +89,6 @@ public abstract  class BaseTest {
                 String[] rowData = data[i];
                 elementName = rowData[0];
                 Reporter.log(elementName+" is visible? ");
-                //WebElement element = driver.findElement(By.xpath();
                 WebElement element = getElementWithExcel(rowData[1],rowData[2]);
                 action.moveToElement(element).build().perform();
                 element = getValidateType(rowData[3],element);

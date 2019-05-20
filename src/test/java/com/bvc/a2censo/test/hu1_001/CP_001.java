@@ -38,9 +38,9 @@ public class CP_001 extends BaseTest {
         Assert.assertTrue(driver.getCurrentUrl().equals(basePath));
 
         Reporter.log("Validating menu content<br>");
-        checkPageContent("object","menu",testPath,dataPath);
+        checkPageContent("objects","menu",testPath,dataPath);
         Reporter.log("Validating body content<br>");
-        checkPageContent("object","body",testPath,dataPath);
+        checkPageContent("objects","body",testPath,dataPath);
         checkScrolling(testPath);
     }
 
