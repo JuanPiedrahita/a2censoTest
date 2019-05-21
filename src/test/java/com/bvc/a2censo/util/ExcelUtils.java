@@ -7,7 +7,6 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
 public class ExcelUtils {
 
     private static XSSFSheet sheet;
@@ -18,7 +17,7 @@ public class ExcelUtils {
     public static String[][] getData(String FilePath, String SheetName, Boolean ignoreFirstRow){
         String[][] table = null;
         try {
-            FileInputStream ExcelFile = new FileInputStream(FilePath);
+            FileInputStream ExcelFile = new  FileInputStream(FilePath);
             // Access the required test data sheet
             book = new XSSFWorkbook(ExcelFile);
             sheet = book.getSheet(SheetName);
@@ -62,6 +61,5 @@ public class ExcelUtils {
                 throw (e);
         }
     }
-
 
 }

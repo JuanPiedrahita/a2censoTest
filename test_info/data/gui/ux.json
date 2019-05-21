@@ -1,0 +1,59 @@
+[
+  {
+    "name": "menu_header_link", 
+    "textColor": "rgba(44, 44, 42, 1)", 
+    "backgroundColor": "", 
+    "textColorOver": "rgba(39, 129, 229, 1)", 
+    "backgroundColorOver": "", 
+    "textColorPress": "rgba(39, 129, 229, 1)", 
+    "backgroundColorPress": ""
+  }, {
+    "name": "primary_btn_active", 
+    "textColor": "rgba(255, 255, 255, 1)", 
+    "backgroundColor": "rgba(57, 226, 112, 1)", 
+    "textColorOver": "rgba(255, 255, 255, 1)", 
+    "backgroundColorOver": "rgba(57, 226, 112, 1)", 
+    "textColorPress": "rgba(216, 216, 216, 1)", 
+    "backgroundColorPress": "rgba(57, 226, 112, 1)"
+  }, {
+    "name": "primary_btn_inactive", 
+    "textColor": "rgba(255, 255, 255, 1)", 
+    "backgroundColor": "rgba(155, 155, 155, 1)", 
+    "textColorOver": "rgba(255, 255, 255, 1)", 
+    "backgroundColorOver": "rgba(155, 155, 155, 1)", 
+    "textColorPress": "rgba(216, 216, 216, 1)", 
+    "backgroundColorPress": "rgba(155, 155, 155, 1)"
+  }, {
+    "name": "primary_btn_disabled", 
+    "textColor": "rgba(255, 255, 255, 1)", 
+    "backgroundColor": "rgba(216, 216, 216, 1)", 
+    "textColorOver": "rgba(255, 255, 255, 1)", 
+    "backgroundColorOver": "rgba(216, 216, 216, 1)", 
+    "textColorPress": "rgba(255, 255, 255, 1)", 
+    "backgroundColorPress": "rgba(216, 216, 216, 1)"
+  }, {
+    "name": "primary_btn_error", 
+    "textColor": "rgba(255, 255, 255, 1)", 
+    "backgroundColor": "rgba(255, 73, 95, 1)", 
+    "textColorOver": "rgba(255, 255, 255, 1)", 
+    "backgroundColorOver": "rgba(255, 73, 95, 1)", 
+    "textColorPress": "rgba(216, 216, 216, 1)", 
+    "backgroundColorPress": "rgba(255, 73, 95, 1)"
+  }, {
+    "name": "secondary_btn_see_more", 
+    "textColor": "rgba(0, 0, 0, 1)", 
+    "backgroundColor": "rgba(255, 255, 255, 1)", 
+    "textColorOver": "rgba(255, 255, 255, 1)", 
+    "backgroundColorOver": "rgba(58, 202, 252, 1)", 
+    "textColorPress": "rgba(216, 216, 216, 1)", 
+    "backgroundColorPress": "rgba(57, 226, 112, 1)"
+  }, {
+    "name": "footer_link", 
+    "textColor": "rgba(255, 255, 255, 1)", 
+    "backgroundColor": "rgba(58, 202, 253, 1)", 
+    "textColorOver": "rgba(255, 255, 255, 1)", 
+    "backgroundColorOver": "rgba(58, 202, 253, 1)", 
+    "textColorPress": "rgba(255, 255, 255, 1)", 
+    "backgroundColorPress": "rgba(58, 202, 253, 1)"
+  }
+]

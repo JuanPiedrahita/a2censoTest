@@ -27,10 +27,6 @@
                         <env>dev</env>
                         <basePath>http://a2censo.com.test.portal.s3-website-us-east-1.amazonaws.com/</basePath>
                         <dataBasePath>test_info/data/</dataBasePath>
-                        <!-- styles -->
-                        <menuLinkUp>rgba(44, 44, 42, 1)</menuLinkUp>
-                        <menuLinkOver>rgba(39, 129, 229, 1)</menuLinkOver>
-                        <!--menuLinkPressed>rgba(39, 129, 229, 1)</menuLinkPressed-->
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -73,6 +69,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>3.11</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
         </dependency>
 
     </dependencies>

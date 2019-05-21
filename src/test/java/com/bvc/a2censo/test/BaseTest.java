@@ -1,8 +1,6 @@
 package com.bvc.a2censo.test;
 
-import com.bvc.a2censo.util.BroswerFactory;
-import com.bvc.a2censo.util.ExcelUtils;
-import com.bvc.a2censo.util.Screenshot;
+import com.bvc.a2censo.util.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -57,51 +54,26 @@ public abstract  class BaseTest {
         driver.navigate().to(basePath);
     }
 
-    public WebElement getElementWithExcel(String selector, String selecttValue){
-        WebElement element = null;
-        if (selector.equals("xpath")) {
-            element = driver.findElement(By.xpath(selecttValue));
-        } else if (selector.equals("id")) {
-            element = driver.findElement(By.id(selecttValue));
-        } else if (selector.equals("link")) {
-            element = driver.findElement(By.linkText(selecttValue));
-        } else if (selector.equals("class")) {
-            element = driver.findElement(By.className(selecttValue));
-        } else if (selector.equals("name")) {
-            element = driver.findElement(By.name(selecttValue));
-        }
-        return element;
-    }
-
-    public WebElement getValidateType(String validationType, WebElement element){
-        WebElement elementToValidate = null;
-        if(validationType.equals("visibility")){
-            elementToValidate = wait.until(ExpectedConditions.visibilityOf(element));
-        }
-        return  elementToValidate;
-    }
-
     public void checkPageContent(String document,String sheet, String testPath, String dataPath){
         String elementName = "page_content";
+        String validationType = "";
         try {
             String[][] data = ExcelUtils.getData(dataPath+document+".xlsx",sheet,true);
             for (int i = 0; i<data.length; i++) {
                 String[] rowData = data[i];
                 elementName = rowData[0];
-                Reporter.log(elementName+" is visible? ");
-                WebElement element = getElementWithExcel(rowData[1],rowData[2]);
+                validationType = rowData[3];
+                WebElement element = TestUtils.getElementWithExcel(driver, rowData[1],rowData[2]);
                 action.moveToElement(element).build().perform();
-                element = getValidateType(rowData[3],element);
-                Reporter.log("Yes <br>");
-                String ssText = Screenshot.takeScreenshot(driver,testPath,elementName+"_visible");
-                Reporter.log(ssText);
+                element = TestUtils.getValidateType(wait,validationType,element);
+                CustomReporter.log(elementName+" is "+validationType+"? Yes");
+                CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_"+validationType));
             }
         } catch (Exception e) {
             e.printStackTrace();
-            Reporter.log(elementName+" is not visible<br>");
-            String ssText = Screenshot.takeScreenshot(driver,testPath,elementName+"_not_visible");
-            Reporter.log(ssText);
-            Assert.fail(elementName+" is not visible");
+            CustomReporter.error(elementName+" is not "+validationType);
+            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
+            Assert.fail(elementName+" is not "+validationType);
         }
     }
 

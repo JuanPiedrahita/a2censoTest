@@ -2,6 +2,7 @@ package com.bvc.a2censo.test.hu1_001;
 
 import com.bvc.a2censo.test.BaseTest;
 import com.bvc.a2censo.test.UXTest;
+import com.bvc.a2censo.util.CustomReporter;
 import com.bvc.a2censo.util.ExcelUtils;
 import com.bvc.a2censo.util.Screenshot;
 import org.openqa.selenium.By;
@@ -12,7 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -27,43 +27,44 @@ public class CP_001 extends BaseTest {
         String testCase = hu+"-"+this.getClass().getSimpleName();
         String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
         String dataPath = dataBasePath+"/"+hu+"/";
-        Reporter.log("Starting test: "+testCase+",with OS: "+operativeSystem+" in "+broswer+"<br>");
+        CustomReporter.title("Starting test: "+testCase+",with OS: "+operativeSystem+" in "+broswer);
 
-        Reporter.log("Navigating to "+basePath+"<br>");
+        CustomReporter.log("Navigating to "+basePath);
         this.navegateToLanding();
 
-        Reporter.log("Title shoud be 'a2censo'<br>");
+        CustomReporter.log("Title shoud be 'a2censo'");
         Assert.assertTrue(driver.getTitle().equals("a2censo"));
 
-        Reporter.log("Url shoud be '"+basePath+"'<br>");
+        CustomReporter.log("Url shoud be '"+basePath);
         Assert.assertTrue(driver.getCurrentUrl().equals(basePath));
 
-        Reporter.log("Validating menu content<br>");
+        CustomReporter.subTitle("Validating menu content");
         checkPageContent("objects","menu",testPath,dataPath);
-        Reporter.log("Validating body content<br>");
+        CustomReporter.subTitle("Validating body content");
         checkPageContent("objects","body",testPath,dataPath);
         checkScrolling(testPath);
 
-        Reporter.log("Checking UX<br>");
+        CustomReporter.subTitle("Checking UX");
         checkUX(testPath);
     }
 
     public void checkUX(String testPath){
         UXTest.checkHeaderScroll(driver, wait, testPath);
+        UXTest.checkFooterStyles(driver,wait,action,testPath);
         UXTest.checkHeaderStyles(driver,wait,action,testPath);
     }
 
     public void checkScrolling (String testPath) {
         try {
-            Reporter.log("Scrolling to the top<br>");
+            CustomReporter.log("Scrolling to the top");
             jsExecutor.executeScript("window.scrollTo(0, 0)");
-            Thread.sleep(2000);
-            Reporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_to_top"));
-            Reporter.log("Scrolling to the end<br>");
+            Thread.sleep(3000);
+            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_to_top"));
+            CustomReporter.log("Scrolling to the end");
             jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
             Thread.sleep(2000);
-            Reporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_to_footer"));
-            Reporter.log("Scrolling to the top<br>");
+            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_to_footer"));
+            CustomReporter.log("Scrolling to the top");
             jsExecutor.executeScript("window.scrollTo(0, 0)");
             Thread.sleep(2000);
         } catch (InterruptedException e) {

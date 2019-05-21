@@ -6,10 +6,14 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 public class Screenshot {
 
-    private static final String basePath = "test_info/execution_evidences/";
+    private static final String basePath = "test_info/execution_evidences/"
+            + (new SimpleDateFormat("yyyy-MM-dd_HH-mm")).format(new Timestamp(System.currentTimeMillis()))
+            + "/";
 
     public static String takeScreenshot (WebDriver driver, String outputFolder, String name) {
         try {
@@ -28,7 +32,7 @@ public class Screenshot {
             //URL path = new File(filePath).toURI().toURL();
             String path = "../"+filePath;
             String text = "<a href=" + path + "> Click to open screenshot of " + name + "</a>";
-            return name + text + "<br>";
+            return name + text;
         } catch (Exception e) {
             String err = "Exception while taking screenshot "
                     + e.getMessage();
