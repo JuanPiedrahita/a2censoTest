@@ -12,6 +12,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
 import static java.util.Arrays.asList;
 
 public abstract  class TestBase {
@@ -24,6 +27,9 @@ public abstract  class TestBase {
     protected String basePath;
     protected String dataBasePath;
     protected WebDriverWait wait;
+    protected static final String responsiveReportPath = "test_info/execution_evidences/responsive/"
+            + (new SimpleDateFormat("yyyy-MM-dd_HH-mm")).format(new Timestamp(System.currentTimeMillis()))
+            + "/";
 
     @BeforeClass
     @Parameters({"browser"})
