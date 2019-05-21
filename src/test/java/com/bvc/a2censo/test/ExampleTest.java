@@ -10,7 +10,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class ExampleTest extends BaseTest {
+public class ExampleTest extends TestBase {
 
     @Test(description = "This TC will perforrm a valid ...")
     @Parameters({"browser","hu"})

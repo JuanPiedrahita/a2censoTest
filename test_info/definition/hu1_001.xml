@@ -8,7 +8,8 @@
     <test name="HU1-001_chrome">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
+            <!--class name="com.bvc.a2censo.test.hu1_001.CP_001"/-->
+            <class name="com.bvc.a2censo.test.hu1_001.CP_007"/>
         </classes>
     </test>
 
@@ -16,6 +17,7 @@
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
+            <class name="com.bvc.a2censo.test.hu1_001.CP_007"/>
         </classes>
     </test-->
 
@@ -23,6 +25,7 @@
         <parameter name="browser" value="opera" />
         <classes>
             <class name="com.bvc.a2censo.test.hu1_001.CP_001"/>
+            <class name="com.bvc.a2censo.test.hu1_001.CP_007"/>
         </classes>
     </test-->
 </suite>

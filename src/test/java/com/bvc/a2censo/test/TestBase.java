@@ -1,19 +1,20 @@
 package com.bvc.a2censo.test;
 
+import com.bvc.a2censo.model.TestDevice;
 import com.bvc.a2censo.util.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
-public abstract  class BaseTest {
+import static java.util.Arrays.asList;
+
+public abstract  class TestBase {
 
     protected WebDriver driver;
     protected Actions action;
@@ -75,6 +76,15 @@ public abstract  class BaseTest {
             CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
             Assert.fail(elementName+" is not "+validationType);
         }
+    }
+
+    @DataProvider(name = "devices")
+    public Object [][] devices () {
+        return new Object[][] {
+                {new TestDevice("mobile", new Dimension(450, 800), asList("mobile"))},
+                {new TestDevice("tablet", new Dimension(750, 800), asList("tablet"))},
+                {new TestDevice("desktop", new Dimension(1024, 800), asList("desktop"))}
+        };
     }
 
 }
