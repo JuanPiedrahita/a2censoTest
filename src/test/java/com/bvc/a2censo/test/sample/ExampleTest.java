@@ -1,7 +1,8 @@
-package com.bvc.a2censo.test;
+package com.bvc.a2censo.test.sample;
 
-import com.bvc.a2censo.util.ExcelUtils;
-import com.bvc.a2censo.util.Screenshot;
+import com.bvc.a2censo.test.model.TestBase;
+import com.bvc.a2censo.test.util.ExcelUtils;
+import com.bvc.a2censo.test.util.Screenshot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

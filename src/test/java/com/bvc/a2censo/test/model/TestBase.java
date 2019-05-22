@@ -1,21 +1,13 @@
-package com.bvc.a2censo.test;
+package com.bvc.a2censo.test.model;
 
-import com.bvc.a2censo.model.TestDevice;
-import com.bvc.a2censo.util.*;
+import com.bvc.a2censo.test.util.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
-
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-
-import static java.util.Arrays.asList;
 
 public abstract  class TestBase {
 
@@ -24,12 +16,9 @@ public abstract  class TestBase {
     protected JavascriptExecutor jsExecutor;
     protected String env;
     protected String operativeSystem;
-    protected String basePath;
+    protected String baseUrl;
     protected String dataBasePath;
     protected WebDriverWait wait;
-    protected static final String responsiveReportPath = "test_info/execution_evidences/responsive/"
-            + (new SimpleDateFormat("yyyy-MM-dd_HH-mm")).format(new Timestamp(System.currentTimeMillis()))
-            + "/";
 
     @BeforeClass
     @Parameters({"browser"})
@@ -38,7 +27,7 @@ public abstract  class TestBase {
         //System properties
         env = System.getProperty("env");
         operativeSystem = System.getProperty("operativeSystem");
-        basePath = System.getProperty("basePath");
+        baseUrl = System.getProperty("baseUrl");
         dataBasePath = System.getProperty("dataBasePath");
 
         BroswerFactory factory = new BroswerFactory();
@@ -58,7 +47,7 @@ public abstract  class TestBase {
     }
 
     public void navegateToLanding(){
-        driver.navigate().to(basePath);
+        driver.navigate().to(baseUrl);
     }
 
     public void checkPageContent(String document,String sheet, String testPath, String dataPath){
@@ -82,15 +71,6 @@ public abstract  class TestBase {
             CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
             Assert.fail(elementName+" is not "+validationType);
         }
-    }
-
-    @DataProvider(name = "devices")
-    public Object [][] devices () {
-        return new Object[][] {
-                {new TestDevice("mobile", new Dimension(450, 800), asList("mobile"))},
-                {new TestDevice("tablet", new Dimension(750, 800), asList("tablet"))},
-                {new TestDevice("desktop", new Dimension(1024, 800), asList("desktop"))}
-        };
     }
 
 }

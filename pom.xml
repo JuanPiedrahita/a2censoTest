@@ -25,7 +25,7 @@
                     <systemPropertyVariables>
                         <operativeSystem>windows</operativeSystem>
                         <env>dev</env>
-                        <basePath>http://a2censo.com.test.portal.s3-website-us-east-1.amazonaws.com/</basePath>
+                        <baseUrl>http://a2censo.com.test.portal.s3-website-us-east-1.amazonaws.com/</baseUrl>
                         <dataBasePath>test_info/data/</dataBasePath>
                     </systemPropertyVariables>
                 </configuration>
@@ -82,7 +82,14 @@
         <dependency>
             <groupId>com.galenframework</groupId>
             <artifactId>galen-java-support</artifactId>
-            <version>2.0.9</version>
+            <version>2.4.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.4</version>
         </dependency>
 
     </dependencies>

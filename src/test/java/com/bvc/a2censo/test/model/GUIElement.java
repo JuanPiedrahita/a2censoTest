@@ -1,4 +1,4 @@
-package com.bvc.a2censo.model;
+package com.bvc.a2censo.test.model;
 
 public class GUIElement extends AbstractJson {
 

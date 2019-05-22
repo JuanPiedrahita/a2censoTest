@@ -1,9 +1,9 @@
-package com.bvc.a2censo.test.hu1_001;
+package com.bvc.a2censo.test.cases.hu1_001;
 
-import com.bvc.a2censo.test.TestBase;
-import com.bvc.a2censo.test.UXTest;
-import com.bvc.a2censo.util.CustomReporter;
-import com.bvc.a2censo.util.Screenshot;
+import com.bvc.a2censo.test.model.TestBase;
+import com.bvc.a2censo.test.cases.gui.UXTest;
+import com.bvc.a2censo.test.util.CustomReporter;
+import com.bvc.a2censo.test.util.Screenshot;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -19,14 +19,14 @@ public class CP_001 extends TestBase {
         String dataPath = dataBasePath+"/"+hu+"/"+this.getClass().getSimpleName().replace("_","-")+"/";
         CustomReporter.title("Starting test: "+testCase+",with OS: "+operativeSystem+" in "+broswer);
 
-        CustomReporter.log("Navigating to "+basePath);
+        CustomReporter.log("Navigating to "+baseUrl);
         this.navegateToLanding();
 
         CustomReporter.log("Title shoud be 'a2censo'");
         Assert.assertTrue(driver.getTitle().equals("a2censo"));
 
-        CustomReporter.log("Url shoud be '"+basePath);
-        Assert.assertTrue(driver.getCurrentUrl().equals(basePath));
+        CustomReporter.log("Url shoud be '"+baseUrl);
+        Assert.assertTrue(driver.getCurrentUrl().equals(baseUrl));
 
         CustomReporter.subTitle("Validating menu content");
         checkPageContent("objects","menu",testPath,dataPath);

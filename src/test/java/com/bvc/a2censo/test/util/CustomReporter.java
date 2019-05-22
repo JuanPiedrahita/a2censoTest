@@ -1,4 +1,4 @@
-package com.bvc.a2censo.util;
+package com.bvc.a2censo.test.util;
 
 import org.testng.Reporter;
 

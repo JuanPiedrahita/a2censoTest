@@ -1,4 +1,4 @@
-package com.bvc.a2censo.util;
+package com.bvc.a2censo.test.model;
 
 import org.openqa.selenium.WebDriver;
 
