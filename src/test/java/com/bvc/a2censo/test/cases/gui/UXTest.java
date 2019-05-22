@@ -1,8 +1,8 @@
-package com.bvc.a2censo.test;
+package com.bvc.a2censo.test.cases.gui;
 
-import com.bvc.a2censo.model.AbstractJson;
-import com.bvc.a2censo.model.GUIElement;
-import com.bvc.a2censo.util.*;
+import com.bvc.a2censo.test.model.AbstractJson;
+import com.bvc.a2censo.test.model.GUIElement;
+import com.bvc.a2censo.test.util.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import javax.swing.*;
 import java.awt.*;
 
 public class UXTest {

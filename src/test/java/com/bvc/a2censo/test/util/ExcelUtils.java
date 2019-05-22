@@ -1,4 +1,4 @@
-package com.bvc.a2censo.util;
+package com.bvc.a2censo.test.util;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;

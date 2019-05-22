@@ -1,4 +1,4 @@
-package com.bvc.a2censo.util;
+package com.bvc.a2censo.test.util;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;

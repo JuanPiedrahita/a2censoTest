@@ -1,6 +1,6 @@
-package com.bvc.a2censo.util;
+package com.bvc.a2censo.test.util;
 
-import com.bvc.a2censo.model.AbstractJson;
+import com.bvc.a2censo.test.model.AbstractJson;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 

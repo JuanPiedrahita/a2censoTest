@@ -1,26 +1,22 @@
-package com.bvc.a2censo.test;
+package com.bvc.a2censo.test.model;
 
-import com.bvc.a2censo.util.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.bvc.a2censo.test.util.*;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-public abstract  class BaseTest {
+public abstract  class TestBase {
 
     protected WebDriver driver;
     protected Actions action;
     protected JavascriptExecutor jsExecutor;
     protected String env;
     protected String operativeSystem;
-    protected String basePath;
+    protected String baseUrl;
     protected String dataBasePath;
     protected WebDriverWait wait;
 
@@ -31,7 +27,7 @@ public abstract  class BaseTest {
         //System properties
         env = System.getProperty("env");
         operativeSystem = System.getProperty("operativeSystem");
-        basePath = System.getProperty("basePath");
+        baseUrl = System.getProperty("baseUrl");
         dataBasePath = System.getProperty("dataBasePath");
 
         BroswerFactory factory = new BroswerFactory();
@@ -51,7 +47,7 @@ public abstract  class BaseTest {
     }
 
     public void navegateToLanding(){
-        driver.navigate().to(basePath);
+        driver.navigate().to(baseUrl);
     }
 
     public void checkPageContent(String document,String sheet, String testPath, String dataPath){

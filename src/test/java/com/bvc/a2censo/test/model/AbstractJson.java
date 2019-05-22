@@ -1,6 +1,4 @@
-package com.bvc.a2censo.model;
-
-import java.util.List;
+package com.bvc.a2censo.test.model;
 
 public abstract class AbstractJson {
 

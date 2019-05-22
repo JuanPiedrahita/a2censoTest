@@ -1,4 +1,4 @@
-package com.bvc.a2censo.util;
+package com.bvc.a2censo.test.model;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +12,7 @@ import org.openqa.selenium.opera.OperaOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class BroswerFactory implements BroswerFactoryMethod{
+public class BroswerFactory implements BroswerFactoryMethod {
 
     public WebDriver createWebDriver(String os, String broswer, String env) {
 

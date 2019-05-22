@@ -1,24 +1,14 @@
-package com.bvc.a2censo.test.hu1_001;
+package com.bvc.a2censo.test.cases.hu1_001;
 
-import com.bvc.a2censo.test.BaseTest;
-import com.bvc.a2censo.test.UXTest;
-import com.bvc.a2censo.util.CustomReporter;
-import com.bvc.a2censo.util.ExcelUtils;
-import com.bvc.a2censo.util.Screenshot;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Coordinates;
-import org.openqa.selenium.interactions.internal.Locatable;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.bvc.a2censo.test.model.TestBase;
+import com.bvc.a2censo.test.cases.gui.UXTest;
+import com.bvc.a2censo.test.util.CustomReporter;
+import com.bvc.a2censo.test.util.Screenshot;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
-
-public class CP_001 extends BaseTest {
+public class CP_001 extends TestBase {
 
     @Test(description = "This TC will access to a2censo portal")
     @Parameters({"browser","hu"})
@@ -26,17 +16,17 @@ public class CP_001 extends BaseTest {
 
         String testCase = hu+"-"+this.getClass().getSimpleName();
         String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
-        String dataPath = dataBasePath+"/"+hu+"/";
+        String dataPath = dataBasePath+"/"+hu+"/"+this.getClass().getSimpleName().replace("_","-")+"/";
         CustomReporter.title("Starting test: "+testCase+",with OS: "+operativeSystem+" in "+broswer);
 
-        CustomReporter.log("Navigating to "+basePath);
+        CustomReporter.log("Navigating to "+baseUrl);
         this.navegateToLanding();
 
         CustomReporter.log("Title shoud be 'a2censo'");
         Assert.assertTrue(driver.getTitle().equals("a2censo"));
 
-        CustomReporter.log("Url shoud be '"+basePath);
-        Assert.assertTrue(driver.getCurrentUrl().equals(basePath));
+        CustomReporter.log("Url shoud be '"+baseUrl);
+        Assert.assertTrue(driver.getCurrentUrl().equals(baseUrl));
 
         CustomReporter.subTitle("Validating menu content");
         checkPageContent("objects","menu",testPath,dataPath);

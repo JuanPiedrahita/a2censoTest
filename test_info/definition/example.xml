@@ -8,21 +8,21 @@
     <test name="test_chrome">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name="com.bvc.a2censo.test.ExampleTest"/>
+            <class name="com.bvc.a2censo.test.sample.ExampleTest"/>
         </classes>
     </test>
 
     <!--test name="test_firefox">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name="com.bvc.a2censo.test.ExampleTest"/>
+            <class name="com.bvc.a2censo.test.sample.ExampleTest"/>
         </classes>
     </test-->
 
     <!--test name="test_opera">
         <parameter name="browser" value="opera" />
         <classes>
-            <class name="com.bvc.a2censo.test.ExampleTest"/>
+            <class name="com.bvc.a2censo.test.sample.ExampleTest"/>
         </classes>
     </test-->
 
