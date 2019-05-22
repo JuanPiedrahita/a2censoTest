@@ -1,21 +1,15 @@
 package com.bvc.a2censo.test.model;
 
 import com.bvc.a2censo.test.util.CustomReporter;
-import com.galenframework.api.Galen;
-import com.galenframework.reports.GalenTestInfo;
-import com.galenframework.reports.HtmlReportBuilder;
+import com.bvc.a2censo.test.util.GalenHtmlReporter;
 import com.galenframework.reports.model.LayoutReport;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.LinkedList;
-import java.util.List;
+
 
 import static java.util.Arrays.asList;
 
@@ -27,9 +21,26 @@ public class ResponsiveBaseTest {
     protected String env;
     protected String operativeSystem;
     protected String specPath;
-    protected static final String responsiveReportPath = "test_info/execution_evidences/responsive/"
-            + (new SimpleDateFormat("yyyy-MM-dd_HH-mm")).format(new Timestamp(System.currentTimeMillis()))
-            + "/";
+    protected String responsiveReportPath;
+    protected String broswer;
+
+    @BeforeSuite
+    public void onInit(){
+        responsiveReportPath = "test_info/execution_evidences/responsive/"
+                + (new SimpleDateFormat("yyyy-MM-dd_HH-mm")).format(new Timestamp(System.currentTimeMillis()))
+                + "/";
+        System.setProperty("responsiveReportPath",responsiveReportPath);
+    }
+
+    @AfterSuite
+    @Parameters({"browser"})
+    public void onFinish(String browser){
+        try {
+            GalenHtmlReporter.build(responsiveReportPath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     @BeforeClass
     @Parameters({"browser"})
@@ -41,22 +52,16 @@ public class ResponsiveBaseTest {
         baseUrl = System.getProperty("baseUrl");
         dataBasePath = System.getProperty("dataBasePath");
 
+        this.broswer = browser;
         specPath = dataBasePath + "/specs/";
 
         BroswerFactory factory = new BroswerFactory();
         driver = factory.createWebDriver(operativeSystem,browser,env);
     }
 
-    public void generateGalenReport(LayoutReport layoutReport,String deviceName) throws Exception{
-        //Creating a list of tests
-        List<GalenTestInfo> tests = new LinkedList<GalenTestInfo>();
-        //The object you create will be consisting the information regarding the test
-        GalenTestInfo test = GalenTestInfo.fromString("Test Automation Using Galen Framework");
-        //Adding layout report to the test report
-        test.getReport().layout(layoutReport, "Verifying landing responsive");
-        tests.add(test);
-        new HtmlReportBuilder().build(tests, responsiveReportPath+deviceName);
-        CustomReporter.log("<a href=../" + responsiveReportPath+deviceName+"/" + "report.html> Click to open responsive test report</a>");
+    public void generateGalenReport(LayoutReport layoutReport,String deviceName, String page) throws Exception{
+        GalenHtmlReporter.addTest(page+" responsive in "+deviceName+":"+broswer,layoutReport,"Checking "+page+" responsive layout for "+deviceName);
+        CustomReporter.log("<a href=../" + System.getProperty("responsiveReportPath")+"report.html> Click to open "+page+" responsive test for "+deviceName+" report</a>");
     }
 
     @AfterClass

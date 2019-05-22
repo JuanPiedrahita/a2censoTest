@@ -22,7 +22,7 @@ public class CP_007 extends ResponsiveBaseTest {
         try {
             String page = "landing";
             String pageSpectPath = specPath+page+".spec";
-            generateGalenReport(Galen.checkLayout(driver, pageSpectPath, device.getTags()),device.getName());
+            generateGalenReport(Galen.checkLayout(driver, pageSpectPath, device.getTags()),device.getName(),page);
         } catch (Exception e){
             CustomReporter.error("Error verifying landing responsive layout");
             e.printStackTrace();

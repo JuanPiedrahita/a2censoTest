@@ -30,11 +30,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="58" column="77" selection-start-line="58" selection-start-column="77" selection-end-line="58" selection-end-column="77" />
+            <state relative-caret-position="29">
+              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1830#1845#0" expanded="true" />
                 <element signature="e#2874#2875#0" expanded="true" />
                 <element signature="e#2919#2920#0" expanded="true" />
               </folding>
@@ -43,10 +42,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/util/GalenHtmlReporter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#1104#1105#0" expanded="true" />
+                <element signature="e#1132#1133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_info/definition/hu1_001.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_007.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="24" column="107" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
+            <state relative-caret-position="357">
+              <caret line="24" column="112" selection-start-line="24" selection-start-column="112" selection-end-line="24" selection-end-column="112" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/ResponsiveTestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/model/TestDevice.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/hu1_001/CP_001.java" />
-        <option value="$PROJECT_DIR$/test_info/definition/hu1_001.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/hu1_001/CP_007.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/sample/ExampleTest.java" />
@@ -147,9 +170,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_001.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_007.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java" />
         <option value="$PROJECT_DIR$/test_info/data/specs/landing.spec" />
+        <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_007.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/util/GalenHtmlReporter.java" />
+        <option value="$PROJECT_DIR$/test_info/definition/hu1_001.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java" />
       </list>
     </option>
   </component>
@@ -221,58 +246,33 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="cases" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="cases" type="462c0819:PsiDirectoryNode" />
-              <item name="hu1_001" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test-output" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
               <item name="test_info" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="test_info" type="462c0819:PsiDirectoryNode" />
+              <item name="definition" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
               <item name="test_info" type="462c0819:PsiDirectoryNode" />
               <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-              <item name="responsive" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-              <item name="responsive" type="462c0819:PsiDirectoryNode" />
-              <item name="2019-05-22_09-29" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
@@ -280,8 +280,23 @@
               <item name="test_info" type="462c0819:PsiDirectoryNode" />
               <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
               <item name="responsive" type="462c0819:PsiDirectoryNode" />
-              <item name="2019-05-22_09-29" type="462c0819:PsiDirectoryNode" />
-              <item name="dump" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="test_info" type="462c0819:PsiDirectoryNode" />
+              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
+              <item name="responsive" type="462c0819:PsiDirectoryNode" />
+              <item name="2019-05-22_11-07" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
+              <item name="test_info" type="462c0819:PsiDirectoryNode" />
+              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
+              <item name="responsive" type="462c0819:PsiDirectoryNode" />
+              <item name="2019-05-22_11-07" type="462c0819:PsiDirectoryNode" />
+              <item name="firefox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -439,34 +454,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 09h 40m 17s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 57m 04s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 09h 57m 31s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 59m 43s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 03m 06s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 00m 53s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 03m 33s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 04m 58s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 07m 17s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 08m 13s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 12m 09s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 09m 33s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 13m 21s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 25m 17s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 16m 22s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 26m 34s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 22m 06s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 27m 49s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 26m 01s.xml">
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 29m 10s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -682,13 +697,6 @@
     <entry file="file://$PROJECT_DIR$/target/galen-html-reports/layout-1-screenshot.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_info/definition/hu1_001.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/GUIElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-11">
@@ -785,6 +793,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/sample/ExampleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-366">
@@ -795,17 +810,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/util/GalenHtmlReporter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+        <state relative-caret-position="272">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#1104#1105#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_info/definition/hu1_001.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_007.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="24" column="107" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
+        <state relative-caret-position="357">
+          <caret line="24" column="112" selection-start-line="24" selection-start-column="112" selection-end-line="24" selection-end-column="112" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -814,11 +843,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="58" column="77" selection-start-line="58" selection-start-column="77" selection-end-line="58" selection-end-column="77" />
+        <state relative-caret-position="29">
+          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1830#1845#0" expanded="true" />
             <element signature="e#2874#2875#0" expanded="true" />
             <element signature="e#2919#2920#0" expanded="true" />
           </folding>
