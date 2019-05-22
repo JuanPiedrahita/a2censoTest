@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="765">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2874#2875#0" expanded="true" />
@@ -62,6 +62,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -113,7 +122,6 @@
       <replace>textColorPress</replace>
       <replace>textColor</replace>
       <replace>Press</replace>
-      <replace>,</replace>
       <replace>,</replace>
     </replaceStrings>
     <dirStrings>
@@ -169,12 +177,12 @@
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/UXTestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_001.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/test_info/data/specs/landing.spec" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_001/CP_007.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/util/GalenHtmlReporter.java" />
         <option value="$PROJECT_DIR$/test_info/definition/hu1_001.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -256,47 +264,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="definition" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-              <item name="responsive" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-              <item name="responsive" type="462c0819:PsiDirectoryNode" />
-              <item name="2019-05-22_11-07" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="A2censoTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="A2censoTest" type="462c0819:PsiDirectoryNode" />
-              <item name="test_info" type="462c0819:PsiDirectoryNode" />
-              <item name="execution_evidences" type="462c0819:PsiDirectoryNode" />
-              <item name="responsive" type="462c0819:PsiDirectoryNode" />
-              <item name="2019-05-22_11-07" type="462c0819:PsiDirectoryNode" />
-              <item name="firefox" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -454,9 +421,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 57m 04s.xml">
-      <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 10h 59m 43s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
@@ -484,6 +448,9 @@
     <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 29m 10s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_001_xml - 2019.05.22 at 11h 31m 21s.xml">
+      <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_001.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -495,10 +462,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2708018" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2708018" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31587562" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31587562" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -793,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/sample/ExampleTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-366">
@@ -843,13 +803,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/ResponsiveBaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        <state relative-caret-position="765">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2874#2875#0" expanded="true" />
             <element signature="e#2919#2920#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
         </state>
       </provider>
     </entry>
