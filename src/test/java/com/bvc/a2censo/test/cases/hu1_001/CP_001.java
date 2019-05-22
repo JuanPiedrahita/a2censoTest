@@ -40,8 +40,8 @@ public class CP_001 extends TestBase {
 
     public void checkUX(String testPath){
         UXTest.checkHeaderScroll(driver, wait, testPath);
-        UXTest.checkFooterStyles(driver,wait,action,testPath);
         UXTest.checkHeaderStyles(driver,wait,action,testPath);
+        UXTest.checkFooterStyles(driver,wait,action,testPath);
     }
 
     public void checkScrolling (String testPath) {

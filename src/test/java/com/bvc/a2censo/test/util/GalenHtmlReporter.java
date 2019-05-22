@@ -32,7 +32,6 @@ public class GalenHtmlReporter {
 
     public static void build(String path) throws Exception{
         new HtmlReportBuilder().build(GalenHtmlReporter.getReporter().getTests(), path);
-
     }
 
     public List<GalenTestInfo> getTests() {

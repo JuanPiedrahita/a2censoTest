@@ -38,7 +38,7 @@ public class UXTest {
         try{
             CustomReporter.log("Scrolling up "+pixelsToScroll+"px, header must appear");
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,-"+(pixelsToScroll)+")");
-            wait.until(ExpectedConditions.attributeToBe(menuBar,"class","navbar"));
+            wait.until(ExpectedConditions.attributeContains(menuBar,"class","navbar--show"));
             CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_up_menu_apppear"));
         } catch (Exception e){
             e.printStackTrace();
