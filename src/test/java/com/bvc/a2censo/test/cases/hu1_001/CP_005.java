@@ -6,11 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class CP_004 extends TestBase {
+public class CP_005 extends TestBase {
 
-    @Test(description = "This TC will access to a2censo portal")
+    @Test(description = "This TC will check the menu function and content")
     @Parameters({"browser","hu"})
-    public void CP_004(String broswer, String hu) {
+    public void CP_002(String broswer, String hu) {
 
         String testCase = hu+"-"+this.getClass().getSimpleName();
         String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
@@ -20,12 +20,13 @@ public class CP_004 extends TestBase {
         CustomReporter.log("Navigating to "+baseUrl);
         this.navegateToLanding();
 
-        CustomReporter.subTitle("Validating footer content");
-        checkPageContent("objects","footer",testPath,dataPath);
+        CustomReporter.subTitle("Validating vitrina redirection");
+        checkPageContent("objects","vitrina_links",testPath,dataPath);
 
-        CustomReporter.subTitle("Validating footer navigation");
+        CustomReporter.subTitle("Checking vitrina access with open cases");
         CustomReporter.error("Functionality not available yet");
         Assert.fail("Functionality not available yet");
+
     }
 
 }
