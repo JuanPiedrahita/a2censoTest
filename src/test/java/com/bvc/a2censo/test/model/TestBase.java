@@ -9,7 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-public abstract  class TestBase {
+public abstract class TestBase {
 
     protected WebDriver driver;
     protected Actions action;
@@ -60,9 +60,8 @@ public abstract  class TestBase {
                 elementName = rowData[0];
                 validationType = rowData[3];
                 WebElement element = TestUtils.getElementWithExcel(driver, rowData[1],rowData[2]);
-                action.moveToElement(element).build().perform();
-                element = TestUtils.getValidateType(wait,validationType,element);
-                CustomReporter.log(elementName+" is "+validationType+"? Yes");
+                element = TestUtils.getValidateType(driver,action,jsExecutor,wait,validationType,element);
+                CustomReporter.log(elementName+" matches "+validationType+"? Yes");
                 CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_"+validationType));
             }
         } catch (Exception e) {

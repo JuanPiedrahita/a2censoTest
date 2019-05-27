@@ -1,8 +1,10 @@
 package com.bvc.a2censo.test.util;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,10 +26,16 @@ public class TestUtils {
         return element;
     }
 
-    public static WebElement getValidateType(WebDriverWait wait, String validationType, WebElement element){
+    public static WebElement getValidateType(WebDriver driver, Actions action,JavascriptExecutor jsExecutor, WebDriverWait wait, String validationType, WebElement element) throws InterruptedException {
         WebElement elementToValidate = null;
         if(validationType.equals("visible")){
+            action.moveToElement(element).build().perform();
             elementToValidate = wait.until(ExpectedConditions.visibilityOf(element));
+        } else if(validationType.equals("url")){
+            jsExecutor.executeScript("arguments[0].click();", element);
+            wait.until(ExpectedConditions.urlContains(element.getAttribute("href")));
+            Thread.sleep(2000);
+            elementToValidate = element;
         }
         return  elementToValidate;
     }
