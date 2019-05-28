@@ -2,8 +2,6 @@ package com.bvc.a2censo.test.cases.hu1_001;
 
 import com.bvc.a2censo.test.model.TestBase;
 import com.bvc.a2censo.test.util.CustomReporter;
-import com.bvc.a2censo.test.util.Screenshot;
-import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 

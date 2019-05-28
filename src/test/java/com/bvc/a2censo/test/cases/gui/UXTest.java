@@ -28,22 +28,22 @@ public class UXTest {
             CustomReporter.log("Scrolling down "+pixelsToScroll+"px, header must hide");
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,"+(pixelsToScroll)+")");
             wait.until(ExpectedConditions.attributeContains(menuBar,"class","navbar--hidden"));
-            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_down_menu_hide"));
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"scroll_down_menu_hide"));
         } catch (Exception e){
             e.printStackTrace();
             CustomReporter.error("Menu does not hide");
-            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_down_menu_does_not_hide"));
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"scroll_down_menu_does_not_hide"));
             Assert.fail("Scroll down menu does not hide");
         }
         try{
             CustomReporter.log("Scrolling up "+pixelsToScroll+"px, header must appear");
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,-"+(pixelsToScroll)+")");
             wait.until(ExpectedConditions.attributeContains(menuBar,"class","navbar--show"));
-            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_up_menu_apppear"));
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"scroll_up_menu_apppear"));
         } catch (Exception e){
             e.printStackTrace();
             CustomReporter.error("Menu does not appear");
-            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,"scroll_up_menu_does_not_apppear"));
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"scroll_up_menu_does_not_apppear"));
             Assert.fail("Scroll up menu appears");
         }
     }
@@ -121,13 +121,13 @@ public class UXTest {
                 getValidateStyleType(wait,validationType,element, (GUIElement) AbstractJson.getByName(guiElements,elementType),action);
                 CustomReporter.log("Validating "+validationType+" for "+elementName+" of type "+elementType+": "
                         + validationType+" for "+elementName+" matches");
-                CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_"+validationType));
+                CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,elementName+"_"+validationType));
             }
         } catch (Exception e) {
             e.printStackTrace();
             CustomReporter.error("Validating "+validationType+" for "+elementName+"of type "+elementType+": "+
                     validationType+" for "+elementName+" does not matches ");
-            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
             Assert.fail(validationType+" for "+elementName+" does not matches");
         }
     }

@@ -4,6 +4,7 @@ import com.bvc.a2censo.test.model.ResponsiveBaseTest;
 import com.bvc.a2censo.test.model.TestDevice;
 import com.bvc.a2censo.test.util.CustomReporter;
 import com.galenframework.api.Galen;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CP_007 extends ResponsiveBaseTest {
@@ -23,6 +24,8 @@ public class CP_007 extends ResponsiveBaseTest {
             String page = "landing";
             String pageSpectPath = specPath+page+".spec";
             generateGalenReport(Galen.checkLayout(driver, pageSpectPath, device.getTags()),device.getName(),page);
+            CustomReporter.error("Responsive not available yet");
+            Assert.fail("Functionality not available yet");
         } catch (Exception e){
             CustomReporter.error("Error verifying landing responsive layout");
             e.printStackTrace();

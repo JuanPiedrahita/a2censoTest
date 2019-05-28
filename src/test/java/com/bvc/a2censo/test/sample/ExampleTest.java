@@ -2,7 +2,7 @@ package com.bvc.a2censo.test.sample;
 
 import com.bvc.a2censo.test.model.TestBase;
 import com.bvc.a2censo.test.util.ExcelUtils;
-import com.bvc.a2censo.test.util.Screenshot;
+import com.bvc.a2censo.test.util.ImageUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -124,7 +124,7 @@ public class ExampleTest extends TestBase {
 
         //Take screenshoot
         String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
-        String ssText = Screenshot.takeScreenshot(driver,testPath,broswer);
+        String ssText = ImageUtils.takeScreenshot(driver,testPath,broswer);
         Reporter.log(ssText);
     }
 

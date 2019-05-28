@@ -62,12 +62,12 @@ public abstract class TestBase {
                 WebElement element = TestUtils.getElementWithExcel(driver, rowData[1],rowData[2]);
                 element = TestUtils.getValidateType(driver,action,jsExecutor,wait,validationType,element);
                 CustomReporter.log(elementName+" matches "+validationType+"? Yes");
-                CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_"+validationType));
+                CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,elementName+"_"+validationType));
             }
         } catch (Exception e) {
             e.printStackTrace();
             CustomReporter.error(elementName+" is not "+validationType);
-            CustomReporter.log(Screenshot.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
             Assert.fail(elementName+" is not "+validationType);
         }
     }
