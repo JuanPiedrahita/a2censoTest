@@ -60,7 +60,7 @@ public class UXTest {
     public static void checkFooterStyles(WebDriver driver, WebDriverWait wait, Actions action, String testPath){
         CustomReporter.subSubTitle("Checking Footer Styles");
         try {
-            WebElement footer = driver.findElement(By.xpath("/html/body/div[1]/div/div/section/section[7]/div/div[1]/div[1]"));
+            WebElement footer = driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[5]/div[1]/div[1]"));
             action.moveToElement(footer).build().perform();
             Thread.sleep(2000);
             Robot robot = new Robot();
@@ -125,7 +125,7 @@ public class UXTest {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            CustomReporter.error("Validating "+validationType+" for "+elementName+"of type "+elementType+": "+
+            CustomReporter.error("Validating "+validationType+" for "+elementName+" of type "+elementType+": "+
                     validationType+" for "+elementName+" does not matches ");
             CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,elementName+"_not_"+validationType));
             Assert.fail(validationType+" for "+elementName+" does not matches");

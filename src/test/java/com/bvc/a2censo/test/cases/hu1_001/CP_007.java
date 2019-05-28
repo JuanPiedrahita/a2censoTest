@@ -25,7 +25,7 @@ public class CP_007 extends ResponsiveBaseTest {
             String pageSpectPath = specPath+page+".spec";
             generateGalenReport(Galen.checkLayout(driver, pageSpectPath, device.getTags()),device.getName(),page);
             CustomReporter.error("Responsive not available yet");
-            Assert.fail("Functionality not available yet");
+            Assert.fail("Responsive not available yet");
         } catch (Exception e){
             CustomReporter.error("Error verifying landing responsive layout");
             e.printStackTrace();

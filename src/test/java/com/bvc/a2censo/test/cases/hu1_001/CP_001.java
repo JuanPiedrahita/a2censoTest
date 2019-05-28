@@ -4,9 +4,15 @@ import com.bvc.a2censo.test.model.TestBase;
 import com.bvc.a2censo.test.cases.gui.UXTest;
 import com.bvc.a2censo.test.util.CustomReporter;
 import com.bvc.a2censo.test.util.ImageUtils;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import java.sql.Driver;
 
 public class CP_001 extends TestBase {
 
@@ -32,20 +38,21 @@ public class CP_001 extends TestBase {
         checkPageContent("objects","menu",testPath,dataPath);
         CustomReporter.subTitle("Validating body content");
         checkPageContent("objects","body",testPath,dataPath);
-        checkScrolling(testPath);
 
         CustomReporter.subTitle("Checking UX");
-        checkUX(testPath);
+        checkUX(testPath,driver,wait,action,jsExecutor);
     }
 
-    public void checkUX(String testPath){
+    public void checkUX(String testPath, WebDriver driver, WebDriverWait wait, Actions action, JavascriptExecutor jsExecutor){
+        checkScrolling(testPath,jsExecutor);
         UXTest.checkHeaderScroll(driver, wait, testPath);
         UXTest.checkHeaderStyles(driver,wait,action,testPath);
         UXTest.checkFooterStyles(driver,wait,action,testPath);
     }
 
-    public void checkScrolling (String testPath) {
+    public void checkScrolling (String testPath, JavascriptExecutor jsExecutor) {
         try {
+            CustomReporter.subSubTitle("Checking scrolling");
             CustomReporter.log("Scrolling to the top");
             jsExecutor.executeScript("window.scrollTo(0, 0)");
             Thread.sleep(3000);
