@@ -2,9 +2,11 @@ package com.bvc.a2censo.test.model;
 
 import com.bvc.a2censo.test.util.CustomReporter;
 import com.bvc.a2censo.test.util.GalenHtmlReporter;
+import com.galenframework.api.Galen;
 import com.galenframework.reports.model.LayoutReport;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.sql.Timestamp;
@@ -62,6 +64,19 @@ public class ResponsiveBaseTest {
     public void generateGalenReport(LayoutReport layoutReport,String deviceName, String page) throws Exception{
         GalenHtmlReporter.addTest(page+" responsive in "+deviceName+":"+broswer,layoutReport,"Checking "+page+" responsive layout for "+deviceName);
         CustomReporter.log("<a href=../" + System.getProperty("responsiveReportPath")+"report.html> Click to open "+page+" responsive test for "+deviceName+" report</a>");
+    }
+
+
+    protected void checkResponsive(TestDevice device, String page){
+        try {
+            CustomReporter.title("Starting responsive test on "+page+" page with dimensions: "+device.toString());
+            driver.manage().window().setSize(device.getScreenSize());
+            String pageSpectPath = specPath+page+".spec";
+            generateGalenReport(Galen.checkLayout(driver, pageSpectPath, device.getTags()),device.getName(),page);
+        } catch (Exception e){
+            CustomReporter.error("Error verifying landing responsive layout");
+            e.printStackTrace();
+        }
     }
 
     @AfterClass
