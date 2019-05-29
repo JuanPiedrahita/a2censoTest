@@ -17,6 +17,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.14.1</version>
                 <configuration>
+                    <!-- Report -->
+                    <reportsDirectory>test-output/</reportsDirectory>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <!--suiteXmlFile>test_info/definition/example.xml</suiteXmlFile-->
