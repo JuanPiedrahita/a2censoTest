@@ -4,6 +4,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
 import sun.misc.BASE64Decoder;
 
 
@@ -43,6 +47,24 @@ public class ImageUtils {
             return name + text;
         } catch (Exception e) {
             String err = "Exception while taking screenshot "
+                    + e.getMessage();
+            System.out.println(err);
+            return "err";
+        }
+    }
+
+    public static String takeElementScreenShot(WebDriver driver, WebElement webElement, String outputFolder, String name){
+        try {
+            String format = "png";
+            String folderPath = ImageUtils.getFolderPath(outputFolder);
+            String filePath = folderPath+name+"."+format;
+            Screenshot screenshot = new AShot().coordsProvider(new WebDriverCoordsProvider()).takeScreenshot(driver, webElement);
+            ImageIO.write(screenshot.getImage(),format,new File(filePath));
+            String path = "../"+filePath;
+            String text = "<a href=" + path + "> Click to open screenshot of " + name + "</a>";
+            return name + text;
+        } catch (Exception e) {
+            String err = "Exception while taking element screenshot "
                     + e.getMessage();
             System.out.println(err);
             return "err";
