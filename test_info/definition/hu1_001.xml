@@ -8,16 +8,16 @@
     <test name="HU1-001_chrome">
         <parameter name="browser" value="chrome" />
         <classes>
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_001"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_002"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_003"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_004"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_005"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_006"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_007"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_008"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_009"/-->
-            <!--class name="com.bvc.a2censo.test.cases.hu1_001.CP_010"/-->
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_001"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_002"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_003"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_004"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_005"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_006"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_007"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_008"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_009"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_001.CP_010"/>
         </classes>
     </test>
 

@@ -12,8 +12,6 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.sql.Driver;
-
 public class CP_001 extends TestBase {
 
     @Test(description = "This TC will access to a2censo portal")
