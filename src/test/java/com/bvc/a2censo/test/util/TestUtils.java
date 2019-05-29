@@ -37,10 +37,13 @@ public class TestUtils {
             Thread.sleep(2000);
             elementToValidate = element;
         } else if(validationType.equals("element_makes_visible")){
+            action.moveToElement(element).build().perform();
             String element_selector = validationValue.split(":",2)[0];
             String element_select_value = validationValue.split(":",2)[1];
             jsExecutor.executeScript("arguments[0].click();", element);
-            wait.until(ExpectedConditions.visibilityOf(TestUtils.getElementWithExcel(driver,element_selector,element_select_value)));
+            WebElement visibleElement = TestUtils.getElementWithExcel(driver,element_selector,element_select_value);
+            action.moveToElement(visibleElement).build().perform();
+            wait.until(ExpectedConditions.visibilityOf(visibleElement));
             Thread.sleep(2000);
             elementToValidate = element;
         }

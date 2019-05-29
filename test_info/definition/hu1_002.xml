@@ -8,8 +8,8 @@
         <parameter name="browser" value="chrome" />
         <classes>
             <!--class name="com.bvc.a2censo.test.cases.hu1_002.CP_001"/-->
-            <class name="com.bvc.a2censo.test.cases.hu1_002.CP_002"/>
-            <!--class name="com.bvc.a2censo.test.cases.hu1_002.CP_003"/-->
+            <!--class name="com.bvc.a2censo.test.cases.hu1_002.CP_002"/-->
+            <class name="com.bvc.a2censo.test.cases.hu1_002.CP_003"/>
             <!--class name="com.bvc.a2censo.test.cases.hu1_002.CP_004"/-->
             <!--class name="com.bvc.a2censo.test.cases.hu1_002.CP_005"/-->
             <!--class name="com.bvc.a2censo.test.cases.hu1_002.CP_006"/-->
