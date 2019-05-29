@@ -8,11 +8,11 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class CP_001 extends TestBase {
+public class CP_002 extends TestBase {
 
-    @Test(description = "This TC will check conocenos section content")
+    @Test(description = "This TC will check financiate section content")
     @Parameters({"browser","hu"})
-    public void CP_001(String broswer, String hu) {
+    public void CP_002(String broswer, String hu) {
 
         String testCase = hu+"-"+this.getClass().getSimpleName();
         String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();
@@ -33,8 +33,6 @@ public class CP_001 extends TestBase {
         CustomReporter.subTitle("Validating section "+sectionName+" content");
         checkPageContent("objects",sectionName+"_content",testPath,dataPath);
 
-        CustomReporter.error("Real statistics not available yet");
-        Assert.fail("Real Statistics not available yet");
     }
 
 }

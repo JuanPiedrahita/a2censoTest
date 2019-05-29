@@ -53,14 +53,18 @@ public abstract class TestBase {
     public void checkPageContent(String document,String sheet, String testPath, String dataPath){
         String elementName = "page_content";
         String validationType = "";
+        String validationValue = "";
         try {
             String[][] data = ExcelUtils.getData(dataPath+document+".xlsx",sheet,true);
             for (int i = 0; i<data.length; i++) {
                 String[] rowData = data[i];
                 elementName = rowData[0];
                 validationType = rowData[3];
+                if (rowData.length > 4) {
+                    validationValue = rowData[4];
+                }
                 WebElement element = TestUtils.getElementWithExcel(driver, rowData[1],rowData[2]);
-                element = TestUtils.getValidateType(driver,action,jsExecutor,wait,validationType,element);
+                element = TestUtils.getValidateType(driver,action,jsExecutor,wait,validationType,element,validationValue);
                 CustomReporter.log(elementName+" matches "+validationType+"? Yes");
                 CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,elementName+"_"+validationType));
             }

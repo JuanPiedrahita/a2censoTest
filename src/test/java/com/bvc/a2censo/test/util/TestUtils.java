@@ -26,7 +26,7 @@ public class TestUtils {
         return element;
     }
 
-    public static WebElement getValidateType(WebDriver driver, Actions action,JavascriptExecutor jsExecutor, WebDriverWait wait, String validationType, WebElement element) throws InterruptedException {
+    public static WebElement getValidateType(WebDriver driver, Actions action,JavascriptExecutor jsExecutor, WebDriverWait wait, String validationType, WebElement element, String validationValue) throws InterruptedException {
         WebElement elementToValidate = null;
         if(validationType.equals("visible")){
             action.moveToElement(element).build().perform();
@@ -34,6 +34,13 @@ public class TestUtils {
         } else if(validationType.equals("url")){
             jsExecutor.executeScript("arguments[0].click();", element);
             wait.until(ExpectedConditions.urlContains(element.getAttribute("href")));
+            Thread.sleep(2000);
+            elementToValidate = element;
+        } else if(validationType.equals("element_makes_visible")){
+            String element_selector = validationValue.split(":",2)[0];
+            String element_select_value = validationValue.split(":",2)[1];
+            jsExecutor.executeScript("arguments[0].click();", element);
+            wait.until(ExpectedConditions.visibilityOf(TestUtils.getElementWithExcel(driver,element_selector,element_select_value)));
             Thread.sleep(2000);
             elementToValidate = element;
         }
