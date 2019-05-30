@@ -38,7 +38,10 @@ public class UXTest {
         try{
             CustomReporter.log("Scrolling up "+pixelsToScroll+"px, header must appear");
             ((JavascriptExecutor) driver).executeScript("window.scrollBy(0,-"+(pixelsToScroll)+")");
-            wait.until(ExpectedConditions.attributeContains(menuBar,"class","navbar--show"));
+            wait.until(ExpectedConditions.or(
+                    ExpectedConditions.attributeContains(menuBar,"class","navbar--show"),
+                    ExpectedConditions.attributeContains(menuBar,"class","navbar--onload")
+            ));
             CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"scroll_up_menu_apppear"));
         } catch (Exception e){
             e.printStackTrace();
@@ -60,7 +63,7 @@ public class UXTest {
     public static void checkFooterStyles(WebDriver driver, WebDriverWait wait, Actions action, String testPath){
         CustomReporter.subSubTitle("Checking Footer Styles");
         try {
-            WebElement footer = driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[5]/div[1]/div[1]"));
+            WebElement footer = driver.findElement(By.xpath("//*[@id=\"footer\"]"));
             action.moveToElement(footer).build().perform();
             Thread.sleep(2000);
             Robot robot = new Robot();
