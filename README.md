@@ -1,5 +1,5 @@
 # a2censo Tests
----
+
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](http://a2censo.com/)
 Pruebas automatizadas para el proyecto de a2censo (Producto de BVC).
 * Pruebas de guías de estilo.

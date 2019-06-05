@@ -24,6 +24,7 @@
                         <!--suiteXmlFile>test_info/definition/example.xml</suiteXmlFile-->
                         <suiteXmlFile>test_info/definition/hu1_001.xml</suiteXmlFile>
                         <suiteXmlFile>test_info/definition/hu1_002.xml</suiteXmlFile>
+                        <suiteXmlFile>test_info/definition/hu1_004.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <operativeSystem>windows</operativeSystem>
