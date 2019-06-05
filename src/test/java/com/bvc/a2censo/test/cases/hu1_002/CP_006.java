@@ -32,6 +32,7 @@ public class CP_006 extends TestBase {
             String finalUrl = rowData[6];
             WebElement option = TestUtils.getElementWithExcel(driver,rowData[1],rowData[2]);
             action.moveToElement(option).build().perform();
+            wait.until(ExpectedConditions.elementToBeClickable(option));
             CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,optionName));
             option.click();
             String subOption = rowData[3];
