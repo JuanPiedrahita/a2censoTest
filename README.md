@@ -43,11 +43,12 @@ Se definen los [casos de prueba](test_info/definition "Definición de los casos 
 
 ##### Broswser Factory
 Debido a que el sistema debe funcionar en diferentes navegadores se creo una fabrica de navegadores la cual recibe como parametro el sistema operativo y el nombre de navegador y crea el driver de acuerdo a lo solicitado, el parametro se define en la suite con la etiqueta `<parameter name="browser"value="name"/>`. Los navegadores aceptados y las etiquetas correspondientes son:
-| Navegador      | Etiqueta |
-| ----------- | ----------- |
-|Firefox | `<parameter name="browser"value="firefox"/>`       |
-| Chrome   | `<parameter name="browser"value="chrome"/>`        |
-| Opera   | `<parameter name="browser"value="opera"/>`        |
+
+| Navegador | Etiqueta |
+| --- | --- |
+| Firefox | `<parameter name="browser"value="firefox"/>` |
+| Chrome | `<parameter name="browser"value="chrome"/>` |
+| Opera | `<parameter name="browser"value="opera"/>` |
 
 ##### Headless Mode
 Para que las pruebas corran en headless mode (Puede usarse en integración continua) solo debe cambiarse la etiqueta `<env>` de **dev** a **prod** de forma que esta queda así en el archivo POM:
