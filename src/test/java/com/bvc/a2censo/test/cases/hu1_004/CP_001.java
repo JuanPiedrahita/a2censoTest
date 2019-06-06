@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class CP_001 extends TestBase {
 
-    @Test(description = "This TC will check conocenos section content")
+    @Test(description = "This TC will check contact button function")
     @Parameters({"browser","hu"})
     public void CP_001(String broswer, String hu) {
 

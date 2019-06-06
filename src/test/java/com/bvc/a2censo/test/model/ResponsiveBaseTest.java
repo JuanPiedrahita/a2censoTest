@@ -6,6 +6,8 @@ import com.galenframework.api.Galen;
 import com.galenframework.reports.model.LayoutReport;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -25,6 +27,9 @@ public class ResponsiveBaseTest {
     protected String specPath;
     protected String responsiveReportPath;
     protected String broswer;
+    protected WebDriverWait wait;
+    protected String hu;
+    protected Actions actions;
 
     @BeforeSuite
     public void onInit(){
@@ -45,8 +50,8 @@ public class ResponsiveBaseTest {
     }
 
     @BeforeClass
-    @Parameters({"browser"})
-    public void setUp(String browser) {
+    @Parameters({"browser","hu"})
+    public void setUp(String browser, String hu) {
 
         //System properties
         env = System.getProperty("env");
@@ -57,8 +62,13 @@ public class ResponsiveBaseTest {
         this.broswer = browser;
         specPath = dataBasePath + "/specs/";
 
+        this.hu = hu;
+
         BroswerFactory factory = new BroswerFactory();
         driver = factory.createWebDriver(operativeSystem,browser,env);
+
+        wait = new WebDriverWait(driver,5);
+        actions = new Actions(driver);
     }
 
     public void generateGalenReport(LayoutReport layoutReport,String deviceName, String page) throws Exception{
