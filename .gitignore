@@ -1,3 +1,5 @@
 test-output
 target
 test_info/execution_evidences
+test_info/data/email/tokens
+test_info/data/email/credentials.json

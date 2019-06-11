@@ -56,6 +56,9 @@ public class ExcelUtils {
             int dataType = cell.getCellType();
             if (dataType == 3) {
                 return "";
+            } else  if (dataType == 0) {
+                String CellData = cell.getNumericCellValue()+"";
+                return CellData;
             } else {
                 String CellData = cell.getStringCellValue();
                 return CellData;

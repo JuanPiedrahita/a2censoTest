@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class TestUtils {
 
@@ -48,6 +50,30 @@ public class TestUtils {
             elementToValidate = element;
         }
         return  elementToValidate;
+    }
+
+    public static void sendDataToFields(WebDriver driver, String[][] fields, String[] data){
+        for(int i = 0; i < fields.length; i++){
+            String[] row = fields[i];
+            String fieldName = row[0], fieldSelector = row[1], selectValue = row[2], fieldType = row[3];
+            String fieldData = data[i];
+            WebElement field = TestUtils.getElementWithExcel(driver,fieldSelector,selectValue);
+            if (fieldType.equals("text") || fieldType.equals("number")){
+                CustomReporter.log("Sending value "+fieldData+" to field "+fieldName);
+                field.sendKeys(fieldData);
+            } else if (fieldType.equals("not_enabled")) {
+                CustomReporter.log("Field "+fieldName+" not enabled.");
+            } else if (fieldType.equals("select")){
+                CustomReporter.log("Selecting option "+fieldData+" on field "+fieldName);
+                Select selecField = new Select(field);
+                selecField.selectByValue(fieldData);
+            } else if (fieldType.equals("checkbox")) {
+                CustomReporter.log("Selecting option "+fieldData+" on field "+fieldName);
+                if (fieldData.equals("true")) {
+                    field.click();
+                }
+            }
+        }
     }
 
 }
