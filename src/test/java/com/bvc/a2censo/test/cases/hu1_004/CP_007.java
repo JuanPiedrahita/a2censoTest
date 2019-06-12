@@ -10,7 +10,7 @@ public class CP_007 extends TestBase {
 
     @Test(description = "This TC will check terms and policies")
     @Parameters({"browser","hu"})
-    public void CP_004(String broswer, String hu) {
+    public void CP_007(String broswer, String hu) {
 
         String testCase = hu+"-"+this.getClass().getSimpleName();
         String testPath = hu+"/"+broswer+"/"+this.getClass().getSimpleName();

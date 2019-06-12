@@ -84,16 +84,15 @@ public class CP_005 extends TestBase {
         WebElement responseModal = TestUtils.getElementWithExcel(driver,sendPqrsData[1][1],sendPqrsData[1][2]);
         try{
             wait.until(ExpectedConditions.visibilityOf(responseModal));
-            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"pqrs_registered"));
+            String responseMessage = TestUtils.getElementWithExcel(driver,sendPqrsData[2][1],sendPqrsData[2][2]).getText();
+            pqrsId = responseMessage.split(" ")[5];
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,pqrsId+"_pqrs_registered"));
         } catch (Exception e){
             String msg = "Error registering pqrs";
             CustomReporter.error(msg);
             CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"pqrs_not_registered"));
             Assert.fail(msg);
         }
-
-        String responseMessage = TestUtils.getElementWithExcel(driver,sendPqrsData[2][1],sendPqrsData[2][2]).getText();
-        pqrsId = responseMessage.split(" ")[5];
 
         return pqrsId;
     }
