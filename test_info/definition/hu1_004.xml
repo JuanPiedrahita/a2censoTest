@@ -15,9 +15,11 @@
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_005"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_006"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_007"/>
-            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_008"/-->
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_008"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_009"/>
-            <!--class name="com.bvc.a2censo.test.cases.hu1_004.CP_010"/-->
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_010"/-->
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_011"/>
+            <!--class name="com.bvc.a2censo.test.cases.hu1_004.CP_012"/-->
         </classes>
     </test>
 
@@ -34,6 +36,8 @@
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_008"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_009"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_010"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_011"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_012"/>
         </classes>
     </test-->
 
@@ -50,6 +54,8 @@
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_008"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_009"/>
             <class name="com.bvc.a2censo.test.cases.hu1_004.CP_010"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_011"/>
+            <class name="com.bvc.a2censo.test.cases.hu1_004.CP_012"/>
         </classes>
     </test-->
 </suite>
