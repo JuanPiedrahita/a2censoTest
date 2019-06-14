@@ -2,6 +2,7 @@ package com.bvc.a2censo.test.cases.hu1_004;
 
 import com.bvc.a2censo.test.model.TestBase;
 import com.bvc.a2censo.test.util.CustomReporter;
+import com.bvc.a2censo.test.util.ExcelUtils;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -19,7 +20,8 @@ public class CP_006 extends TestBase {
 
         navegateToLanding();
 
-        CP_005.fillPQRSForm(dataPath,testPath,driver,action,wait);
+        String[] pqrsData = ExcelUtils.getData(dataPath+"objects.xlsx","pqrs_data",true)[0];
+        CP_005.fillPQRSForm(dataPath,testPath,driver,action,wait,pqrsData);
         String pqrsId = CP_005.sendPQRSForm(dataPath,testPath,driver,action,wait);
 
         CustomReporter.log("Pqrs registered with id "+pqrsId);

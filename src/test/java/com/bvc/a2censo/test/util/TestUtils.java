@@ -58,19 +58,23 @@ public class TestUtils {
             String fieldName = row[0], fieldSelector = row[1], selectValue = row[2], fieldType = row[3];
             String fieldData = data[i];
             WebElement field = TestUtils.getElementWithExcel(driver,fieldSelector,selectValue);
-            if (fieldType.equals("text") || fieldType.equals("number")){
-                CustomReporter.log("Sending value "+fieldData+" to field "+fieldName);
-                field.sendKeys(fieldData);
-            } else if (fieldType.equals("not_enabled")) {
-                CustomReporter.log("Field "+fieldName+" not enabled.");
-            } else if (fieldType.equals("select")){
-                CustomReporter.log("Selecting option "+fieldData+" on field "+fieldName);
-                Select selecField = new Select(field);
-                selecField.selectByValue(fieldData);
-            } else if (fieldType.equals("checkbox")) {
-                CustomReporter.log("Selecting option "+fieldData+" on field "+fieldName);
-                if (fieldData.equals("true")) {
-                    field.click();
+            if (fieldData.equals("") || fieldData == null) {
+                CustomReporter.log(fieldName+" data is empty");
+            } else {
+                if (fieldType.equals("text") || fieldType.equals("number")) {
+                    CustomReporter.log("Sending value " + fieldData + " to field " + fieldName);
+                    field.sendKeys(fieldData);
+                } else if (fieldType.equals("not_enabled")) {
+                    CustomReporter.log("Field " + fieldName + " not enabled.");
+                } else if (fieldType.equals("select")) {
+                    CustomReporter.log("Selecting option " + fieldData + " on field " + fieldName);
+                    Select selecField = new Select(field);
+                    selecField.selectByValue(fieldData);
+                } else if (fieldType.equals("checkbox")) {
+                    CustomReporter.log("Selecting option " + fieldData + " on field " + fieldName);
+                    if (fieldData.equals("true")) {
+                        field.click();
+                    }
                 }
             }
         }

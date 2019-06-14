@@ -42,8 +42,8 @@ public class CP_008 extends TestBase {
 
     public String addPqrs(String dataPath, String testPath, WebDriver driver, Actions action, WebDriverWait wait){
         navegateToLanding();
-
-        CP_005.fillPQRSForm(dataPath,testPath,driver,action,wait);
+        String[] pqrsData = ExcelUtils.getData(dataPath+"objects.xlsx","pqrs_data",true)[0];
+        CP_005.fillPQRSForm(dataPath,testPath,driver,action,wait,pqrsData);
         String pqrsId = CP_005.sendPQRSForm(dataPath,testPath,driver,action,wait);
 
         CustomReporter.log("Pqrs registered with id "+pqrsId);

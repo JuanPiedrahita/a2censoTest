@@ -11,6 +11,9 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
 public class CP_005 extends TestBase {
 
     @Test(description = "This TC will register a pqrs")
@@ -24,7 +27,8 @@ public class CP_005 extends TestBase {
 
         navegateToLanding();
 
-        CP_005.fillPQRSForm(dataPath,testPath,driver,action,wait);
+        String[] pqrsData = ExcelUtils.getData(dataPath+"objects.xlsx","pqrs_data",true)[0];
+        CP_005.fillPQRSForm(dataPath,testPath,driver,action,wait,pqrsData);
         String pqrsId = CP_005.sendPQRSForm(dataPath,testPath,driver,action,wait);
 
         CustomReporter.log("Pqrs registered with id "+pqrsId);
@@ -54,7 +58,7 @@ public class CP_005 extends TestBase {
     }
 
 
-    protected static void fillPQRSForm(String dataPath, String testPath, WebDriver driver, Actions action, WebDriverWait wait){
+    protected static void fillPQRSForm(String dataPath, String testPath, WebDriver driver, Actions action, WebDriverWait wait, String[] pqrsData){
         CustomReporter.subTitle("Going to contact form");
         String[][] dataContact = ExcelUtils.getData(dataPath+"objects.xlsx","contact",true);
 
@@ -65,12 +69,19 @@ public class CP_005 extends TestBase {
 
         CustomReporter.subTitle("Registering pqrs");
         String[][] pqrsFields = ExcelUtils.getData(dataPath+"objects.xlsx","pqrs_fields",true);
-        String[] pqrsData = ExcelUtils.getData(dataPath+"objects.xlsx","pqrs_data",true)[0];
+
 
         CustomReporter.subTitle("Filling fields");
         TestUtils.sendDataToFields(driver,pqrsFields,pqrsData);
 
-        CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"form_filled"));
+        try{
+            Thread.sleep(2000);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        //String time =  (new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss")).format(new Timestamp(System.currentTimeMillis()));
+        String time = System.currentTimeMillis()+"";
+        CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"form_filled"+time));
     }
 
 
@@ -95,6 +106,25 @@ public class CP_005 extends TestBase {
         }
 
         return pqrsId;
+    }
+
+    public static void verifySubmitButtonNotEnabled(String dataPath, String testPath, WebDriver driver, Actions action, WebDriverWait wait) {
+        CustomReporter.subTitle("Sending pqrs");
+        String[][] sendPqrsData = ExcelUtils.getData(dataPath + "objects.xlsx", "send_pqrs", true);
+        WebElement submitButton = TestUtils.getElementWithExcel(driver, sendPqrsData[0][1], sendPqrsData[0][2]);
+        action.moveToElement(submitButton).build().perform();
+        wait.until(ExpectedConditions.visibilityOf(submitButton));
+        //String time =  (new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss")).format(new Timestamp(System.currentTimeMillis()));
+        String time = System.currentTimeMillis()+"";
+        if (submitButton.isEnabled()) {
+            String msg = "Error button is enabled and the pqrs can be registered.";
+            CustomReporter.error(msg);
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"submit_button_enabled_"+time));
+            Assert.fail(msg);
+        } else {
+            CustomReporter.subTitle("OK, Submit button is not enabled.");
+            CustomReporter.log(ImageUtils.takeScreenshot(driver,testPath,"submit_button_not_enabled_"+time));
+        }
     }
 
 }
