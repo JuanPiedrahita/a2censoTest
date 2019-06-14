@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_info/definition/hu1_004.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
+            <state relative-caret-position="30">
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -53,18 +53,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_012.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="44" column="94" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,8 +175,8 @@
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_005.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_010.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_011.java" />
-        <option value="$PROJECT_DIR$/test_info/definition/hu1_004.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_012.java" />
+        <option value="$PROJECT_DIR$/test_info/definition/hu1_004.xml" />
       </list>
     </option>
   </component>
@@ -441,9 +429,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_004_xml - 2019.06.13 at 12h 37m 40s.xml">
-      <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_004.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_004_xml - 2019.06.13 at 12h 42m 08s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_004.xml" configurationId="TestNG" />
     </history-entry>
@@ -471,6 +456,9 @@
     <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_004_xml - 2019.06.14 at 09h 46m 45s.xml">
       <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_004.xml" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="C__Users_juan_piedrahita_Documents_jp_bvc_tests_A2censoTest_test_info_definition_hu1_004_xml - 2019.06.14 at 10h 24m 19s.xml">
+      <configuration name="C:/Users/juan_piedrahita/Documents/jp/bvc/tests/A2censoTest/test_info/definition/hu1_004.xml" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -482,10 +470,10 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2624811" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2624811" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.31587562" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.31587562" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -967,13 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_info/definition/hu1_004.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="20" column="70" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/model/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-269">
@@ -994,6 +975,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_012.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="44" column="94" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_011.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1004,13 +995,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/bvc/a2censo/test/cases/hu1_004/CP_012.java">
+    <entry file="file://$PROJECT_DIR$/test_info/definition/hu1_004.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="44" column="94" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
